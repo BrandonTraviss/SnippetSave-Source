@@ -1,0 +1,48 @@
+# -------------------------
+# Global ignores
+# -------------------------
+node_modules/
+.env
+.env.*
+!.env.example
+*.log
+*.log.*
+logs/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# -------------------------
+# Build outputs
+# -------------------------
+dist/
+build/
+out/
+coverage/
+*.tsbuildinfo
+
+# -------------------------
+# Frontend (Vite + React)
+# -------------------------
+frontend/node_modules/
+frontend/dist/
+frontend/.cache/
+frontend/.vitepress/
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+
+# -------------------------
+# Backend (Express)
+# -------------------------
+backend/node_modules/
+backend/.env
+backend/.env.*
+!backend/.env.example
+backend/logs/
+backend/*.log
+backend/prisma/dev.db
+backend/prisma/dev.db-journal
+backend/prisma/migrations/
