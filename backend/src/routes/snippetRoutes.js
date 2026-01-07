@@ -19,7 +19,7 @@ const router = express.Router();
 /** CREATE SNIPPET */
 router.post("/", protect, createSnippet);
 
-/** ✅ GET USER FAVORITES — MUST BE ABOVE ANY :id ROUTES */
+/** GET USER FAVORITES — MUST BE ABOVE ANY :id ROUTES */
 router.get("/favorites/list", protect, getUserFavorites);
 
 /** GET USER SNIPPETS */
@@ -37,7 +37,7 @@ router.post("/:snippetId/favorite", protect, toggleFavorite);
 /** GET FAVORITE COUNT */
 router.get("/:snippetId/favoriteCount", getFavoriteCount);
 
-/** ✅ THESE MUST COME LAST */
+/** THESE MUST COME LAST */
 router.get("/:id", protect, getSnippetById);
 router.put("/:id", protect, updateSnippet);
 router.delete("/:id", protect, deleteSnippet);
