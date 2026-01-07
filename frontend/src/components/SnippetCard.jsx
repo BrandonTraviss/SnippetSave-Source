@@ -42,7 +42,7 @@ export default function SnippetCard({ snippet, currentUserId, onUnfavorite }) {
       setIsFavorited(newFavorited);
       setFavoritesCount(res.data.favoritesCount);
 
-      // If unfavorited AND this card is inside Favorites page → remove it
+      // If unfavorited AND this card is inside Favorites page, remove it
       if (!newFavorited && onUnfavorite) {
         onUnfavorite(snippet._id);
       }
