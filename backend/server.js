@@ -20,10 +20,10 @@ app.listen(PORT || 5000,()=>{
 // Body Parser
 app.use(express.json())
 
-//Cookie Parser (required for httpOnly JWT cookies)
+// Cookie Parser (required for httpOnly JWT cookies)
 app.use(cookieParser());
 
-//  CORS(required for cookies to work with frontend)
+// CORS(required for cookies to work with frontend)
 app.use(
     cors({
         origin: "http://localhost:5173", // frontend url
@@ -31,7 +31,7 @@ app.use(
     })
 )
 
-// Mount your auth routes
+// auth routes
 app.use('/api/auth', authRoutes)
 app.use("/api/snippets", snippetRoutes);
 
