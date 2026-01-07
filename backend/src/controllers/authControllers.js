@@ -6,29 +6,29 @@ export const registerUser = async (req, res) => {
   try {
     const { username, email, password } = req.body;
 
-    // ✅ Backend validation
+    // Backend validation
     const { valid, error } = validateRegisterInput({ username, email, password });
     if (!valid) {
       return res.status(400).json({ error });
     }
 
-    // ✅ Normalize inputs
+    // Normalize inputs
     const usernameLower = username.toLowerCase();
     const emailLower = email.toLowerCase();
 
-    // ✅ Check username (case-insensitive)
+    // Check username (case-insensitive)
     const usernameExists = await User.findOne({ usernameLower });
     if (usernameExists) {
       return res.status(400).json({ error: "Username is taken" });
     }
 
-    // ✅ Check email (case-insensitive)
+    // Check email (case-insensitive)
     const emailExists = await User.findOne({ emailLower });
     if (emailExists) {
       return res.status(400).json({ error: "Email is already registered" });
     }
 
-    // ✅ Create user (await was missing!)
+    // Create user (await was missing!)
     const user = await User.create({
       username,
       email,
@@ -37,10 +37,10 @@ export const registerUser = async (req, res) => {
       emailLower,
     });
 
-    // ✅ Generate JWT
+    // Generate JWT
     const token = generateToken(user._id);
 
-    // ✅ Set cookie
+    // Set cookie
     res.cookie("token", token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
@@ -68,7 +68,7 @@ export const loginUser = async (req, res) => {
   try {
     const { email, password } = req.body;
 
-    // ✅ Backend validation
+    // Backend validation
     const { valid, error } = validateLoginInput({ email, password });
     if (!valid) {
       return res.status(400).json({ error });
@@ -76,19 +76,19 @@ export const loginUser = async (req, res) => {
 
     const emailLower = email.toLowerCase();
 
-    // ✅ Find user by lowercase email
+    // Find user by lowercase email
     const user = await User.findOne({ emailLower }).select("+password");
     if (!user) {
       return res.status(400).json({ error: "Invalid credentials" });
     }
 
-    // ✅ Compare password
+    // Compare password
     const isMatch = await user.comparePassword(password);
     if (!isMatch) {
       return res.status(400).json({ error: "Invalid credentials" });
     }
 
-    // ✅ Generate JWT
+    // Generate JWT
     const token = generateToken(user._id);
 
     res.cookie("token", token, {
