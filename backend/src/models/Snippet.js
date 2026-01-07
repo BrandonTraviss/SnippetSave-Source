@@ -40,7 +40,7 @@ const snippetSchema = new mongoose.Schema(
       default: [],
     },
 
-    // ✅ NEW FIELD — stores user IDs who favorited this snippet
+    // NEW FIELD — stores user IDs who favorited this snippet
     favoritedBy: [
       {
         type: mongoose.Schema.Types.ObjectId,
