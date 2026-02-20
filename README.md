@@ -1,4 +1,4 @@
-# SnippetSave — Full‑Stack Code Snippet Manager
+# SnippetSave - Full‑Stack Code Snippet Manager
 
 A secure, scalable, and feature‑rich web application for creating, browsing, filtering, and favoriting code snippets. Built with Node.js, Express, MongoDB, and a Vite + React frontend.
 
