@@ -51,7 +51,7 @@ A secure, scalable, and feature‑rich web application for creating, browsing, f
 | Frontend | React, Vite, JavaScript, Axios             |
 | Backend  | Node.js, Express 5                         |
 | Database | MongoDB, Mongoose                          |
-| Auth     | JWT, httpOnly cookies                      |
+| Auth     | JWT                                        |
 | Other    | Pagination, filtering, favorites, SPA fallback |
 
 ---
