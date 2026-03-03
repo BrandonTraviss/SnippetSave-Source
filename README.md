@@ -60,8 +60,8 @@ A secure, scalable, and feature‑rich web application for creating, browsing, f
 
 ### 1. Clone the repository
 
-    git clone https://github.com/yourusername/snippethub.git
-    cd snippethub
+    git clone https://github.com/BrandonTraviss/SnippetSave-Source.git
+    cd SnippetSave-Source
 
 ### 2. Install dependencies
 
