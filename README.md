@@ -48,7 +48,7 @@ A secure, scalable, and feature‑rich web application for creating, browsing, f
 
 | Layer     | Technologies                                |
 |----------|---------------------------------------------|
-| Frontend | React, Vite, JavaScript, Fetch API         |
+| Frontend | React, Vite, JavaScript, Axios             |
 | Backend  | Node.js, Express 5                         |
 | Database | MongoDB, Mongoose                          |
 | Auth     | JWT, httpOnly cookies                      |
