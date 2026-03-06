@@ -1,5 +1,5 @@
-# SnippetSave - Full‑Stack Code Snippet Manager
-
+ # SnippetSave - Full‑Stack Code Snippet Manager
+<img width="1904" height="911" alt="screen1" src="https://github.com/user-attachments/assets/0a267096-ff02-4316-bdf8-57674bad6b06" />
 A secure, scalable, and feature‑rich web application for creating, browsing, filtering, and favoriting code snippets. Built with Node.js, Express, MongoDB, and a Vite + React frontend.
 
 ---
@@ -12,16 +12,23 @@ A secure, scalable, and feature‑rich web application for creating, browsing, f
 - Robust login, registration, and logout flows  
 
 ### Snippet Management
+![screen2](https://github.com/user-attachments/assets/e60068b5-ad4d-4866-a6cc-e76d00d3d92a)
+
 - Create, view, and browse code snippets  
 - Snippets include title, description, language, tags, and favorite count  
 - Fully responsive UI designed for desktop and mobile  
 
 ### Advanced Filtering and Pagination
+<img width="1908" height="904" alt="screen3" src="https://github.com/user-attachments/assets/28398dd9-de72-41f4-a7b5-3ef3ac67229d" />
+
 - Filter snippets by title, tag, and language  
 - Backend‑driven pagination for scalable performance  
 - Clean, query‑based API design  
 
 ### Favorites System
+<img width="1899" height="911" alt="{A3EA0C3B-F8E9-4AE1-8719-EAAC0045875E}" src="https://github.com/user-attachments/assets/01fc3e64-c765-43ca-9239-7b1902309a46" />
+<img width="1906" height="905" alt="{5777BF88-26BE-4BA0-AE8C-4DC9835C0F99}" src="https://github.com/user-attachments/assets/fb80ec96-537d-4f83-b4dc-a7693b9f48dc" />
+
 - Users can favorite or unfavorite snippets  
 - Dedicated Favorites page showing saved snippets  
 - Snippets display real‑time favorite counts  
