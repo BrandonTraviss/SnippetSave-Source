@@ -28,7 +28,7 @@ export const registerUser = async (req, res) => {
       return res.status(400).json({ error: "Email is already registered" });
     }
 
-    // Create user (await was missing!)
+    // Create user
     const user = await User.create({
       username,
       email,
